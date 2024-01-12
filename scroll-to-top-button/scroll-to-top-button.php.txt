@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Multi-Step Form</title>
+    <style>
+        .step {
+            display: none;
+        }
+
+        .step.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="multiStepForm">
+        <!-- Step 1 -->
+        <div class="step" id="step1">
+            <h2>Step 1</h2>
+            <div class="form-group">
+                <label for="address1">Address 1</label>
+                <input type="text" class="form-control" id="address1" required>
+            </div>
+            <div class="form-group">
+                <label for="address2">Address 2</label>
+                <input type="text" class="form-control" id="address2" required>
+            </div>
+            <button class="btn btn-primary nextBtn">Next</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <h2>Step 2</h2>
+            <div class="form-group">
+                <label for="choice">Select One</label>
+                <select class="form-control" id="choice" required>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+            </div>
+            <button class="btn btn-primary prevBtn">Previous</button>
+            <button class="btn btn-primary nextBtn">Next</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" id="step3">
+            <h2>Step 3</h2>
+            <div class="form-group">
+                <label for="datepicker">Pick a Date</label>
+                <input type="date" class="form-control" id="datepicker" required>
+            </div>
+            <button class="btn btn-primary prevBtn">Previous</button>
+            <button class="btn btn-primary nextBtn">Next</button>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step" id="step4">
+            <h2>Step 4</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <button class="btn btn-primary prevBtn">Previous</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var currentStep = 1;
+
+        $(".nextBtn").click(function(){
+            $("#step" + currentStep).removeClass("show");
+            currentStep++;
+            $("#step" + currentStep).addClass("show");
+        });
+
+        $(".prevBtn").click(function(){
+            $("#step" + currentStep).removeClass("show");
+            currentStep--;
+            $("#step" + currentStep).addClass("show");
+        });
+
+        $("#multiStepForm").submit(function(e){
+            e.preventDefault();
+            alert("Form submitted!");
+            // Add your form submission logic here
+        });
+    });
+</script>
+
+</body>
+</html>
