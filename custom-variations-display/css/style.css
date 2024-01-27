@@ -1,0 +1,101 @@
+
+.vswoo-notice {
+    padding: 12px 10px;
+    border-radius: 3px;
+    border: 1px solid #c3c3c3;
+}
+
+.vswoo-notice a,
+.vswoo-notice a:focus,
+.vswoo-notice a:visited,
+.vswoo-notice a:active {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 3px 8px;
+    text-decoration: none;
+    font-size: 12px;
+    color: inherit;
+    border-color: inherit;
+    outline: none;
+}
+
+.vswoo-notice.vswoo-notice-warning {
+    background: #ffc1072e;
+    border-color: #ffc1072e;
+}
+
+.vswoo-notice.vswoo-notice-info {
+    background: #03a9f42e;
+    border-color: #03a9f42e;
+}
+
+
+.wp-picker-container {
+    display: inline-block;
+    vertical-align: inherit;
+    margin-right: -10px;
+}
+
+
+.vswoo-col-content .vswoo-attribute-content {
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.vswoo-attribute-content.type-colors {
+    width: 28px;
+    height: 28px;
+}
+
+.vswoo-attribute-content.type-buttons {
+    border: 1px solid #4a4a4a;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.vswoo-attribute-content.type-buttons:hover {
+    background: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    color: #fff;
+}
+
+.vswoo-attribute-content.type-images {
+    width: 40px;
+    height: 40px;
+}
+
+.vswoo-attribute-content.type-images img{
+    width: 100%;
+}
+
+
+.wc-metaboxes-wrapper .woocommerce_attribute_data .wps-field {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 12px;
+}
+
+.wc-metaboxes-wrapper .woocommerce_attribute_data .wps-field > label {
+    font-weight: 600;
+}
+
+.wp-list-table.plugins .quick-link-demo {
+    color: #b928d2;
+    font-weight: bold;
+}
+
+.wp-list-table.plugins .quick-link-support {
+    color: #d01454;
+    font-weight: bold;
+}
+
+.wp-list-table.plugins .quick-link-pro {
+    color: #108015;
+    font-weight: bold;
+}
+
+
+
+
