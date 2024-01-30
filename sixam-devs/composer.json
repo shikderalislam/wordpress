@@ -1,0 +1,20 @@
+{
+    "name": "imrun/sixam-devs",
+    "description": "A tutorial plugin for sixam devs",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "imrun",
+            "email": "imrun@6amtech.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SixAm\\Devs\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}
